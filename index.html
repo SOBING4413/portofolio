@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon_atoms.ico" type="image/x-icon">
+    <title>SOBING4413 | Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>SOBING<span class="logo-dot"><span class="logo-bracket">/&gt;</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#stats" class="nav-link">Stats</a></li>
+                <li><a href="https://github.com/SOBING4413" target="_blank" class="nav-link nav-github">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg">
+            <img src="./photo.jpg" alt="SOBING4413" class="hero-photo">
+            <div class="hero-overlay"></div>
+        <div class="hero-scanlines"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-glitch" data-text="SOBING4413">SOBING4413</div>
+            <div class="hero-subtitle">
+                <span class="typing-prefix">&gt; </span>
+                <span id="typingText"></span>
+                <span class="cursor">|</span>
+            </div>
+            <div class="hero-tags">
+                <span class="tag">Python</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Lua</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">C++</span>
+                <span class="tag">Shell</span>
+                <span class="tag">HTML</span>
+            </div>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">
+                    <span>Lihat Projects</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                </a>
+                <a href="https://github.com/SOBING4413" target="_blank" class="btn-outline">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <span>GitHub Profile</span>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title reveal">Tentang Saya</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">about_me.sh</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="prompt">$</span> <span class="cmd">cat</span> about_me.txt</p>
+                            <br>
+                            <p class="output">Halo! Saya <span class="highlight">SOBING4413</span>, seorang developer yang passionate dalam dunia pemrograman dan teknologi.</p>
+                            <br>
+                            <p class="output">Saya menguasai berbagai bahasa pemrograman mulai dari <span class="highlight">Python</span>, <span class="highlight">JavaScript</span>, <span class="highlight">Lua</span>, <span class="highlight">TypeScript</span>, <span class="highlight">C++</span>, hingga <span class="highlight">Shell scripting</span>.</p>
+                            <br>
+                            <p class="output">Dengan <span class="highlight">30 repository</span> di GitHub, saya aktif mengembangkan berbagai proyek mulai dari tools keamanan, game scripting (FiveM/Roblox), web development, AI/Machine Learning, hingga automation tools.</p>
+                            <br>
+                            <p class="output">Saya memiliki achievement <span class="highlight">Pull Shark x2</span> dan <span class="highlight">YOLO</span> di GitHub, menunjukkan kontribusi aktif dalam open source development.</p>
+                            <br>
+                            <p><span class="prompt">$</span> <span class="cursor-blink">_</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-cards reveal">
+                    <div class="info-card">
+                        <div class="info-icon">🎯</div>
+                        <div class="info-label">Status</div>
+                        <div class="info-value">Focusing</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📂</div>
+                        <div class="info-label">Repositories</div>
+                        <div class="info-value">30</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">⭐</div>
+                        <div class="info-label">Stars</div>
+                        <div class="info-value">18</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🏆</div>
+                        <div class="info-label">Achievements</div>
+                        <div class="info-value">Pull Shark x2, YOLO</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">💻</div>
+                        <div class="info-label">Bahasa</div>
+                        <div class="info-value">7+ Languages</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🔥</div>
+                        <div class="info-label">Fokus</div>
+                        <div class="info-value">Full Stack Dev</div>
+                    </div>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/about&gt;</span>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title reveal">Penguasaan Pemrograman</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item reveal" data-delay="0">
+                    <div class="skill-header">
+                        <div class="skill-icon">🐍</div>
+                        <span class="skill-name">Python</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                    <div class="skill-desc">AI/ML, Automation, Security Tools, Data Processing</div>
+                </div>
+                <div class="skill-item reveal" data-delay="100">
+                    <div class="skill-header">
+                        <div class="skill-icon">⚡</div>
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                    <div class="skill-desc">Web Apps, Store, Speedtest, Calculator, TypeRush</div>
+                </div>
+                <div class="skill-item reveal" data-delay="200">
+                    <div class="skill-header">
+                        <div class="skill-icon">🌙</div>
+                        <span class="skill-name">Lua</span>
+                        <span class="skill-percent">88%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                    <div class="skill-desc">FiveM Scripts, Roblox, Game Modding, Executor</div>
+                </div>
+                <div class="skill-item reveal" data-delay="300">
+                    <div class="skill-header">
+                        <div class="skill-icon">🔷</div>
+                        <span class="skill-name">TypeScript</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                    <div class="skill-desc">Framework, GUI, Universa-v2</div>
+                </div>
+                <div class="skill-item reveal" data-delay="400">
+                    <div class="skill-header">
+                        <div class="skill-icon">🔧</div>
+                        <span class="skill-name">C++</span>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+                    <div class="skill-desc">Xeno, Low-level Programming</div>
+                </div>
+                <div class="skill-item reveal" data-delay="500">
+                    <div class="skill-header">
+                        <div class="skill-icon">🌐</div>
+                        <span class="skill-name">HTML/CSS</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                    <div class="skill-desc">Web Development, UI Design, Environment Exploit</div>
+                </div>
+                <div class="skill-item reveal" data-delay="600">
+                    <div class="skill-header">
+                        <div class="skill-icon">🐚</div>
+                        <span class="skill-name">Shell</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                    <div class="skill-desc">EDUKASI, System Administration, Automation</div>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/skills&gt;</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title reveal">Repository & Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <!-- Filter Buttons -->
+            <div class="filter-buttons reveal">
+                <button class="filter-btn active" data-filter="all">All (30)</button>
+                <button class="filter-btn" data-filter="Python">Python</button>
+                <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+                <button class="filter-btn" data-filter="Lua">Lua</button>
+                <button class="filter-btn" data-filter="TypeScript">TypeScript</button>
+                <button class="filter-btn" data-filter="C++">C++</button>
+                <button class="filter-btn" data-filter="Shell">Shell</button>
+                <button class="filter-btn" data-filter="HTML">HTML</button>
+            </div>
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Cards will be generated by JS -->
+            </div>
+            <span class="section-tag section-tag-close">&lt;/projects&gt;</span>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">&lt;stats&gt;</span>
+                <h2 class="section-title reveal">GitHub Statistics</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="stats-grid reveal">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="30">0</div>
+                    <div class="stat-label">Repositories</div>
+                    <div class="stat-icon">📂</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="7">0</div>
+                    <div class="stat-label">Languages</div>
+                    <div class="stat-icon">💻</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="18">0</div>
+                    <div class="stat-label">Stars Earned</div>
+                    <div class="stat-icon">⭐</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="2">0</div>
+                    <div class="stat-label">Achievements</div>
+                    <div class="stat-icon">🏆</div>
+                </div>
+            </div>
+            <span class="section-tag section-tag-close">&lt;/stats&gt;</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>SOBING<span class="logo-dot">.</span>DEV<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-desc">Full Stack Developer | Open Source Enthusiast</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/SOBING4413" target="_blank" class="footer-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-line"></div>
+                <p>&copy; 2026 SOBING4413. All rights reserved.</p>
+                <p class="footer-made">Made with <span class="heart">❤</span> and lots of <span class="highlight">code</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
